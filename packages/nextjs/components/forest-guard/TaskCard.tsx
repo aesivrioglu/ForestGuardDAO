@@ -1,5 +1,4 @@
 import React from "react";
-import { parseEther, formatEther } from "viem";
 import { CurrencyDollarIcon, MapPinIcon, ClockIcon } from "@heroicons/react/24/outline";
 
 type TaskCardProps = {
@@ -49,7 +48,6 @@ export const TaskCard = ({
     }
   };
 
-  const displayReward = typeof reward === 'bigint' ? formatEther(reward) : reward.toString();
 
   return (
     <div className="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group">
