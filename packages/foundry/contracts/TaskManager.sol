@@ -15,7 +15,7 @@ import {PaymentSplitter} from "./PaymentSplitter.sol";
  */
 contract TaskManager is Ownable, ReentrancyGuard {
     // ─── Types ───────────────────────────────────────────────────────────
-    enum TaskStatus { Open, Assigned, Completed, Cancelled }
+    enum TaskStatus { Open, Assigned, PendingApproval, Completed, Cancelled }
     enum TaskCategory { TreePlanting, Irrigation, PestControl, FirePrevention, SoilMaintenance, WasteCleanup, Monitoring, Other }
     enum TaskPriority { Low, Medium, High, Critical }
 
@@ -48,6 +48,9 @@ contract TaskManager is Ownable, ReentrancyGuard {
     // Worker → assigned task IDs
     mapping(address => uint256[]) public workerTasks;
 
+    // Forest → Category → has active task
+    mapping(uint256 => mapping(TaskCategory => bool)) public hasActiveTask;
+
     // ─── Events ──────────────────────────────────────────────────────────
     event TaskCreated(
         uint256 indexed taskId,
@@ -69,6 +72,7 @@ contract TaskManager is Ownable, ReentrancyGuard {
     error InsufficientForestBudget();
     error InvalidReward();
     error CannotApplyOwnTask();
+    error ActiveTaskExistsForCategory();
 
     // ─── Constructor ─────────────────────────────────────────────────────
     constructor(
@@ -107,6 +111,10 @@ contract TaskManager is Ownable, ReentrancyGuard {
 
         // Check forest has enough budget
         if (forestRegistry.getForestBudget(_forestId) < _reward) revert InsufficientForestBudget();
+
+        // Ensure no active task exists for the same forest and category
+        if (hasActiveTask[_forestId][_category]) revert ActiveTaskExistsForCategory();
+        hasActiveTask[_forestId][_category] = true;
 
         taskId = nextTaskId++;
 
@@ -150,23 +158,39 @@ contract TaskManager is Ownable, ReentrancyGuard {
     }
 
     /**
-     * @notice Submit proof and auto-complete the task.
-     *         In the first prototype, uploading proof automatically triggers approval and payment.
+     * @notice Submit proof that the task is done, pending owner approval.
      * @param _taskId The assigned task to complete
      */
-    function submitProofAndComplete(uint256 _taskId) external nonReentrant {
+    function submitProof(uint256 _taskId) external nonReentrant {
         Task storage task = tasks[_taskId];
 
         if (task.status != TaskStatus.Assigned) revert TaskNotAssigned();
         if (task.assignee != msg.sender) revert NotTaskAssignee();
 
+        // Mark as pending approval
+        task.status = TaskStatus.PendingApproval;
+    }
+
+    /**
+     * @notice Approve a task that is pending approval and process payment.
+     * @param _taskId The task to approve
+     */
+    function approveTask(uint256 _taskId) external nonReentrant {
+        Task storage task = tasks[_taskId];
+
+        if (task.status != TaskStatus.PendingApproval) revert TaskNotAssigned();
+        if (task.creator != msg.sender) revert NotForestOwner();
+
         uint256 reward = task.reward;
         uint256 forestId = task.forestId;
-        address worker = msg.sender;
+        address worker = task.assignee;
 
         // Mark as completed
         task.status = TaskStatus.Completed;
         task.completedAt = block.timestamp;
+
+        // Clear active task flag so a new one can be created for this category
+        hasActiveTask[forestId][task.category] = false;
 
         // Pull funds from ForestRegistry to this contract
         forestRegistry.withdrawForPayment(forestId, reward, payable(address(this)));
@@ -191,6 +215,7 @@ contract TaskManager is Ownable, ReentrancyGuard {
         if (task.status != TaskStatus.Open) revert TaskNotOpen();
 
         task.status = TaskStatus.Cancelled;
+        hasActiveTask[task.forestId][task.category] = false;
         emit TaskCancelled(_taskId);
     }
 
@@ -225,6 +250,14 @@ contract TaskManager is Ownable, ReentrancyGuard {
             }
         }
         return openTasks;
+    }
+
+    function getAllTasks() external view returns (Task[] memory) {
+        Task[] memory _allTasks = new Task[](allTaskIds.length);
+        for (uint256 i = 0; i < allTaskIds.length; i++) {
+            _allTasks[i] = tasks[allTaskIds[i]];
+        }
+        return _allTasks;
     }
 
     function getTotalTasks() external view returns (uint256) {

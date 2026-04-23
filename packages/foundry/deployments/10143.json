@@ -1,0 +1,7 @@
+{
+  "0x2ec090375f15CCb0477a99980292ef332aebFe7C": "PaymentSplitter",
+  "0x3131BDcc52732646B0D9663e9050861cF342e407": "ForestRegistry",
+  "0x40224dae357330334F7b4b0c73011C281316C3C8": "ReputationSystem",
+  "0xB55fA5eB386398635a045faBF12ddf8CB4362Eac": "TaskManager",
+  "networkName": "monad-testnet"
+}

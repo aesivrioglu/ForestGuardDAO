@@ -5,6 +5,2544 @@
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
+  10143: {
+    ReputationSystem: {
+      address: "0x40224dae357330334f7b4b0c73011c281316c3c8",
+      abi: [
+        {
+          type: "constructor",
+          inputs: [
+            {
+              name: "_admin",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "BASE_COMPLETION_POINTS",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "DIAMOND_THRESHOLD",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "GOLD_THRESHOLD",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "PLATINUM_THRESHOLD",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "PRIORITY_CRITICAL",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "PRIORITY_HIGH",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "PRIORITY_LOW",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "PRIORITY_MEDIUM",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "REJECTION_PENALTY",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "SILVER_THRESHOLD",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "allWorkers",
+          inputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "authorizeOperator",
+          inputs: [
+            {
+              name: "_operator",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "authorizedOperators",
+          inputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getEarlyAccessDuration",
+          inputs: [
+            {
+              name: "_worker",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getRank",
+          inputs: [
+            {
+              name: "_worker",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint8",
+              internalType: "enum ReputationSystem.Rank",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getReputation",
+          inputs: [
+            {
+              name: "_worker",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getWorkerCount",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getWorkerStats",
+          inputs: [
+            {
+              name: "_worker",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "tuple",
+              internalType: "struct ReputationSystem.WorkerStats",
+              components: [
+                {
+                  name: "reputationPoints",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "tasksCompleted",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "tasksRejected",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "totalEarned",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "registeredAt",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+              ],
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "owner",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "recordTaskCompletion",
+          inputs: [
+            {
+              name: "_worker",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "_priorityLevel",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "_earned",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "recordTaskRejection",
+          inputs: [
+            {
+              name: "_worker",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "renounceOwnership",
+          inputs: [],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "revokeOperator",
+          inputs: [
+            {
+              name: "_operator",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "transferOwnership",
+          inputs: [
+            {
+              name: "newOwner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "workerStats",
+          inputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "reputationPoints",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "tasksCompleted",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "tasksRejected",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "totalEarned",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "registeredAt",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "event",
+          name: "OperatorAuthorized",
+          inputs: [
+            {
+              name: "operator",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "OperatorRevoked",
+          inputs: [
+            {
+              name: "operator",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "OwnershipTransferred",
+          inputs: [
+            {
+              name: "previousOwner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "newOwner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "RankChanged",
+          inputs: [
+            {
+              name: "worker",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "oldRank",
+              type: "uint8",
+              indexed: false,
+              internalType: "enum ReputationSystem.Rank",
+            },
+            {
+              name: "newRank",
+              type: "uint8",
+              indexed: false,
+              internalType: "enum ReputationSystem.Rank",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "ReputationAdded",
+          inputs: [
+            {
+              name: "worker",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "points",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+            {
+              name: "newTotal",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "ReputationDeducted",
+          inputs: [
+            {
+              name: "worker",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "points",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+            {
+              name: "newTotal",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "TaskRecorded",
+          inputs: [
+            {
+              name: "worker",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "earned",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "WorkerRegistered",
+          inputs: [
+            {
+              name: "worker",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "error",
+          name: "NotAuthorizedOperator",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "OwnableInvalidOwner",
+          inputs: [
+            {
+              name: "owner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+        },
+        {
+          type: "error",
+          name: "OwnableUnauthorizedAccount",
+          inputs: [
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+        },
+      ],
+      inheritedFunctions: {},
+      deployedOnBlock: 27298428,
+    },
+    PaymentSplitter: {
+      address: "0x2ec090375f15ccb0477a99980292ef332aebfe7c",
+      abi: [
+        {
+          type: "constructor",
+          inputs: [
+            {
+              name: "_admin",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "_companyWallet",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "receive",
+          stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "BASIS_POINTS",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "MAX_COMMISSION",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "authorizeOperator",
+          inputs: [
+            {
+              name: "_operator",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "authorizedOperators",
+          inputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "calculateSplit",
+          inputs: [
+            {
+              name: "_amount",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "workerAmount",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "companyFee",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "commissionRate",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "companyWallet",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "owner",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "processPayment",
+          inputs: [
+            {
+              name: "_taskId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "_worker",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "renounceOwnership",
+          inputs: [],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "revokeOperator",
+          inputs: [
+            {
+              name: "_operator",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "setCommissionRate",
+          inputs: [
+            {
+              name: "_newRate",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "setCompanyWallet",
+          inputs: [
+            {
+              name: "_newWallet",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "totalCommissionCollected",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "totalPaidToWorkers",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "transferOwnership",
+          inputs: [
+            {
+              name: "newOwner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "event",
+          name: "CommissionRateUpdated",
+          inputs: [
+            {
+              name: "oldRate",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+            {
+              name: "newRate",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "CompanyWalletUpdated",
+          inputs: [
+            {
+              name: "oldWallet",
+              type: "address",
+              indexed: false,
+              internalType: "address",
+            },
+            {
+              name: "newWallet",
+              type: "address",
+              indexed: false,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "OperatorAuthorized",
+          inputs: [
+            {
+              name: "operator",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "OperatorRevoked",
+          inputs: [
+            {
+              name: "operator",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "OwnershipTransferred",
+          inputs: [
+            {
+              name: "previousOwner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "newOwner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "PaymentProcessed",
+          inputs: [
+            {
+              name: "taskId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+            {
+              name: "worker",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "workerAmount",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+            {
+              name: "companyFee",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "error",
+          name: "InsufficientFunds",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "InvalidCommissionRate",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "InvalidCompanyWallet",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "NotAuthorizedOperator",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "OwnableInvalidOwner",
+          inputs: [
+            {
+              name: "owner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+        },
+        {
+          type: "error",
+          name: "OwnableUnauthorizedAccount",
+          inputs: [
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+        },
+        {
+          type: "error",
+          name: "PaymentFailed",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "ReentrancyGuardReentrantCall",
+          inputs: [],
+        },
+      ],
+      inheritedFunctions: {},
+      deployedOnBlock: 27298434,
+    },
+    ForestRegistry: {
+      address: "0x3131bdcc52732646b0d9663e9050861cf342e407",
+      abi: [
+        {
+          type: "constructor",
+          inputs: [
+            {
+              name: "_admin",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "receive",
+          stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "authorizeOperator",
+          inputs: [
+            {
+              name: "_operator",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "authorizedOperators",
+          inputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "deactivateForest",
+          inputs: [
+            {
+              name: "_forestId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "deductBudget",
+          inputs: [
+            {
+              name: "_forestId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "_amount",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "depositBudget",
+          inputs: [
+            {
+              name: "_forestId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "forests",
+          inputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "id",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "owner",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "name",
+              type: "string",
+              internalType: "string",
+            },
+            {
+              name: "latitude",
+              type: "int256",
+              internalType: "int256",
+            },
+            {
+              name: "longitude",
+              type: "int256",
+              internalType: "int256",
+            },
+            {
+              name: "areaSqMeters",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "budget",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "active",
+              type: "bool",
+              internalType: "bool",
+            },
+            {
+              name: "createdAt",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getForest",
+          inputs: [
+            {
+              name: "_forestId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "tuple",
+              internalType: "struct ForestRegistry.Forest",
+              components: [
+                {
+                  name: "id",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "owner",
+                  type: "address",
+                  internalType: "address",
+                },
+                {
+                  name: "name",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "latitude",
+                  type: "int256",
+                  internalType: "int256",
+                },
+                {
+                  name: "longitude",
+                  type: "int256",
+                  internalType: "int256",
+                },
+                {
+                  name: "areaSqMeters",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "budget",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "active",
+                  type: "bool",
+                  internalType: "bool",
+                },
+                {
+                  name: "createdAt",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+              ],
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getForestBudget",
+          inputs: [
+            {
+              name: "_forestId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getOwnerForests",
+          inputs: [
+            {
+              name: "_owner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint256[]",
+              internalType: "uint256[]",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "isForestOwner",
+          inputs: [
+            {
+              name: "_forestId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "_addr",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "nextForestId",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "owner",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "ownerForests",
+          inputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "registerForest",
+          inputs: [
+            {
+              name: "_name",
+              type: "string",
+              internalType: "string",
+            },
+            {
+              name: "_latitude",
+              type: "int256",
+              internalType: "int256",
+            },
+            {
+              name: "_longitude",
+              type: "int256",
+              internalType: "int256",
+            },
+            {
+              name: "_areaSqMeters",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "forestId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "renounceOwnership",
+          inputs: [],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "revokeOperator",
+          inputs: [
+            {
+              name: "_operator",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "transferOwnership",
+          inputs: [
+            {
+              name: "newOwner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "withdrawBudget",
+          inputs: [
+            {
+              name: "_forestId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "_amount",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "withdrawForPayment",
+          inputs: [
+            {
+              name: "_forestId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "_amount",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "_recipient",
+              type: "address",
+              internalType: "address payable",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "event",
+          name: "BudgetDeducted",
+          inputs: [
+            {
+              name: "forestId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+            {
+              name: "amount",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+            {
+              name: "operator",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "BudgetDeposited",
+          inputs: [
+            {
+              name: "forestId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+            {
+              name: "depositor",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "amount",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "BudgetWithdrawn",
+          inputs: [
+            {
+              name: "forestId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+            {
+              name: "owner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "amount",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "ForestDeactivated",
+          inputs: [
+            {
+              name: "forestId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "ForestRegistered",
+          inputs: [
+            {
+              name: "forestId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+            {
+              name: "owner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "name",
+              type: "string",
+              indexed: false,
+              internalType: "string",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "OperatorAuthorized",
+          inputs: [
+            {
+              name: "operator",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "OperatorRevoked",
+          inputs: [
+            {
+              name: "operator",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "OwnershipTransferred",
+          inputs: [
+            {
+              name: "previousOwner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "newOwner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "error",
+          name: "ForestNotActive",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "InsufficientBudget",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "InvalidAmount",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "NotAuthorizedOperator",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "NotForestOwner",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "OwnableInvalidOwner",
+          inputs: [
+            {
+              name: "owner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+        },
+        {
+          type: "error",
+          name: "OwnableUnauthorizedAccount",
+          inputs: [
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+        },
+        {
+          type: "error",
+          name: "ReentrancyGuardReentrantCall",
+          inputs: [],
+        },
+      ],
+      inheritedFunctions: {},
+      deployedOnBlock: 27298440,
+    },
+    TaskManager: {
+      address: "0xb55fa5eb386398635a045fabf12ddf8cb4362eac",
+      abi: [
+        {
+          type: "constructor",
+          inputs: [
+            {
+              name: "_admin",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "_forestRegistry",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "_reputationSystem",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "_paymentSplitter",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "receive",
+          stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "allTaskIds",
+          inputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "applyForTask",
+          inputs: [
+            {
+              name: "_taskId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "approveTask",
+          inputs: [
+            {
+              name: "_taskId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "cancelTask",
+          inputs: [
+            {
+              name: "_taskId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "createTask",
+          inputs: [
+            {
+              name: "_forestId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "_title",
+              type: "string",
+              internalType: "string",
+            },
+            {
+              name: "_description",
+              type: "string",
+              internalType: "string",
+            },
+            {
+              name: "_reward",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "_category",
+              type: "uint8",
+              internalType: "enum TaskManager.TaskCategory",
+            },
+            {
+              name: "_priority",
+              type: "uint8",
+              internalType: "enum TaskManager.TaskPriority",
+            },
+          ],
+          outputs: [
+            {
+              name: "taskId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "forestRegistry",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "contract ForestRegistry",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "forestTasks",
+          inputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getAllTasks",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "tuple[]",
+              internalType: "struct TaskManager.Task[]",
+              components: [
+                {
+                  name: "id",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "forestId",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "creator",
+                  type: "address",
+                  internalType: "address",
+                },
+                {
+                  name: "assignee",
+                  type: "address",
+                  internalType: "address",
+                },
+                {
+                  name: "title",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "description",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "reward",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "category",
+                  type: "uint8",
+                  internalType: "enum TaskManager.TaskCategory",
+                },
+                {
+                  name: "priority",
+                  type: "uint8",
+                  internalType: "enum TaskManager.TaskPriority",
+                },
+                {
+                  name: "status",
+                  type: "uint8",
+                  internalType: "enum TaskManager.TaskStatus",
+                },
+                {
+                  name: "createdAt",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "completedAt",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+              ],
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getForestTasks",
+          inputs: [
+            {
+              name: "_forestId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint256[]",
+              internalType: "uint256[]",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getOpenTasks",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "tuple[]",
+              internalType: "struct TaskManager.Task[]",
+              components: [
+                {
+                  name: "id",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "forestId",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "creator",
+                  type: "address",
+                  internalType: "address",
+                },
+                {
+                  name: "assignee",
+                  type: "address",
+                  internalType: "address",
+                },
+                {
+                  name: "title",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "description",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "reward",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "category",
+                  type: "uint8",
+                  internalType: "enum TaskManager.TaskCategory",
+                },
+                {
+                  name: "priority",
+                  type: "uint8",
+                  internalType: "enum TaskManager.TaskPriority",
+                },
+                {
+                  name: "status",
+                  type: "uint8",
+                  internalType: "enum TaskManager.TaskStatus",
+                },
+                {
+                  name: "createdAt",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "completedAt",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+              ],
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getTask",
+          inputs: [
+            {
+              name: "_taskId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "tuple",
+              internalType: "struct TaskManager.Task",
+              components: [
+                {
+                  name: "id",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "forestId",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "creator",
+                  type: "address",
+                  internalType: "address",
+                },
+                {
+                  name: "assignee",
+                  type: "address",
+                  internalType: "address",
+                },
+                {
+                  name: "title",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "description",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "reward",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "category",
+                  type: "uint8",
+                  internalType: "enum TaskManager.TaskCategory",
+                },
+                {
+                  name: "priority",
+                  type: "uint8",
+                  internalType: "enum TaskManager.TaskPriority",
+                },
+                {
+                  name: "status",
+                  type: "uint8",
+                  internalType: "enum TaskManager.TaskStatus",
+                },
+                {
+                  name: "createdAt",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "completedAt",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+              ],
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getTotalTasks",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getWorkerTasks",
+          inputs: [
+            {
+              name: "_worker",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint256[]",
+              internalType: "uint256[]",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "hasActiveTask",
+          inputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "",
+              type: "uint8",
+              internalType: "enum TaskManager.TaskCategory",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "nextTaskId",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "owner",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "paymentSplitter",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "contract PaymentSplitter",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "renounceOwnership",
+          inputs: [],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "reputationSystem",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "contract ReputationSystem",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "submitProof",
+          inputs: [
+            {
+              name: "_taskId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "tasks",
+          inputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "id",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "forestId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "creator",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "assignee",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "title",
+              type: "string",
+              internalType: "string",
+            },
+            {
+              name: "description",
+              type: "string",
+              internalType: "string",
+            },
+            {
+              name: "reward",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "category",
+              type: "uint8",
+              internalType: "enum TaskManager.TaskCategory",
+            },
+            {
+              name: "priority",
+              type: "uint8",
+              internalType: "enum TaskManager.TaskPriority",
+            },
+            {
+              name: "status",
+              type: "uint8",
+              internalType: "enum TaskManager.TaskStatus",
+            },
+            {
+              name: "createdAt",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "completedAt",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "transferOwnership",
+          inputs: [
+            {
+              name: "newOwner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "workerTasks",
+          inputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "event",
+          name: "OwnershipTransferred",
+          inputs: [
+            {
+              name: "previousOwner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "newOwner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "TaskAssigned",
+          inputs: [
+            {
+              name: "taskId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+            {
+              name: "worker",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "TaskCancelled",
+          inputs: [
+            {
+              name: "taskId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "TaskCompleted",
+          inputs: [
+            {
+              name: "taskId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+            {
+              name: "worker",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "reward",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "TaskCreated",
+          inputs: [
+            {
+              name: "taskId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+            {
+              name: "forestId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+            {
+              name: "title",
+              type: "string",
+              indexed: false,
+              internalType: "string",
+            },
+            {
+              name: "reward",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+            {
+              name: "category",
+              type: "uint8",
+              indexed: false,
+              internalType: "enum TaskManager.TaskCategory",
+            },
+            {
+              name: "priority",
+              type: "uint8",
+              indexed: false,
+              internalType: "enum TaskManager.TaskPriority",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "error",
+          name: "ActiveTaskExistsForCategory",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "CannotApplyOwnTask",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "InsufficientForestBudget",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "InvalidReward",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "NotForestOwner",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "NotTaskAssignee",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "OwnableInvalidOwner",
+          inputs: [
+            {
+              name: "owner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+        },
+        {
+          type: "error",
+          name: "OwnableUnauthorizedAccount",
+          inputs: [
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+        },
+        {
+          type: "error",
+          name: "ReentrancyGuardReentrantCall",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "TaskNotAssigned",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "TaskNotOpen",
+          inputs: [],
+        },
+      ],
+      inheritedFunctions: {},
+      deployedOnBlock: 27298441,
+    },
+  },
   31337: {
     ReputationSystem: {
       address: "0x700b6a60ce7eaaea56f065753d8dcb9653dbad35",
@@ -1036,7 +3574,7 @@ const deployedContracts = {
         },
       ],
       inheritedFunctions: {},
-      deployedOnBlock: 2,
+      deployedOnBlock: 3,
     },
     ForestRegistry: {
       address: "0xb19b36b1456e65e3a6d514d3f715f204bd59f431",
@@ -1758,6 +4296,19 @@ const deployedContracts = {
         },
         {
           type: "function",
+          name: "approveTask",
+          inputs: [
+            {
+              name: "_taskId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
           name: "cancelTask",
           inputs: [
             {
@@ -1846,6 +4397,81 @@ const deployedContracts = {
               name: "",
               type: "uint256",
               internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getAllTasks",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "tuple[]",
+              internalType: "struct TaskManager.Task[]",
+              components: [
+                {
+                  name: "id",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "forestId",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "creator",
+                  type: "address",
+                  internalType: "address",
+                },
+                {
+                  name: "assignee",
+                  type: "address",
+                  internalType: "address",
+                },
+                {
+                  name: "title",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "description",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "reward",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "category",
+                  type: "uint8",
+                  internalType: "enum TaskManager.TaskCategory",
+                },
+                {
+                  name: "priority",
+                  type: "uint8",
+                  internalType: "enum TaskManager.TaskPriority",
+                },
+                {
+                  name: "status",
+                  type: "uint8",
+                  internalType: "enum TaskManager.TaskStatus",
+                },
+                {
+                  name: "createdAt",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "completedAt",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+              ],
             },
           ],
           stateMutability: "view",
@@ -2059,6 +4685,30 @@ const deployedContracts = {
         },
         {
           type: "function",
+          name: "hasActiveTask",
+          inputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "",
+              type: "uint8",
+              internalType: "enum TaskManager.TaskCategory",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
           name: "nextTaskId",
           inputs: [],
           outputs: [
@@ -2118,7 +4768,7 @@ const deployedContracts = {
         },
         {
           type: "function",
-          name: "submitProofAndComplete",
+          name: "submitProof",
           inputs: [
             {
               name: "_taskId",
@@ -2358,6 +5008,11 @@ const deployedContracts = {
             },
           ],
           anonymous: false,
+        },
+        {
+          type: "error",
+          name: "ActiveTaskExistsForCategory",
+          inputs: [],
         },
         {
           type: "error",

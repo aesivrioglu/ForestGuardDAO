@@ -40,7 +40,6 @@ export const DEFAULT_ALCHEMY_API_KEY = "cR4WnXePioePZ5fFrnSiR";
 const scaffoldConfig = {
   // The networks on which your DApp is live
   targetNetworks: [
-    chains.foundry,
     monadTestnet,
   ],
   // The interval at which your front-end polls the RPC servers for new data

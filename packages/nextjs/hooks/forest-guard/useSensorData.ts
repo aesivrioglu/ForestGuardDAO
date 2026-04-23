@@ -23,7 +23,7 @@ export const useSensorData = (lat?: number, lon?: number) => {
       try {
         const response = await fetch(`/api/sensors?lat=${lat}&lon=${lon}`);
         if (!response.ok) throw new Error("Failed to fetch sensor data");
-        
+
         const result = await response.json();
         setData(result);
       } catch (err: any) {

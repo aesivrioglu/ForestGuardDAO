@@ -9,10 +9,12 @@ type TaskCardProps = {
   reward: bigint | string | number;
   priority: number;
   category: number;
-  status: "Open" | "Assigned" | "Completed" | "Cancelled";
+  status: "Open" | "Assigned" | "PendingApproval" | "Completed" | "Cancelled";
   onApply?: () => void;
   onComplete?: () => void;
+  onApprove?: () => void;
   isAssignee?: boolean;
+  isOwner?: boolean;
 };
 
 export const TaskCard = ({
@@ -23,7 +25,9 @@ export const TaskCard = ({
   status,
   onApply,
   onComplete,
-  isAssignee
+  onApprove,
+  isAssignee,
+  isOwner
 }: TaskCardProps) => {
 
   const getPriorityBadge = () => {
@@ -39,6 +43,7 @@ export const TaskCard = ({
     switch (status) {
       case "Open": return <span className="badge badge-success badge-outline">Açık İlan</span>;
       case "Assigned": return <span className="badge badge-info badge-outline">Devam Ediyor</span>;
+      case "PendingApproval": return <span className="badge badge-warning badge-outline">Onay Bekliyor</span>;
       case "Completed": return <span className="badge badge-neutral badge-outline">Tamamlandı</span>;
       default: return <span className="badge badge-ghost badge-outline">İptal</span>;
     }
@@ -81,7 +86,12 @@ export const TaskCard = ({
           )}
           {status === "Assigned" && isAssignee && (
             <button className="btn btn-success w-full sm:w-auto shadow-lg shadow-success/30" onClick={onComplete}>
-              Kanıt Yükle & Tamamla
+              İşi Bitirdim (Kanıt Yükle)
+            </button>
+          )}
+          {status === "PendingApproval" && isOwner && (
+            <button className="btn btn-warning w-full sm:w-auto shadow-lg shadow-warning/30" onClick={onApprove}>
+              Onayla ve Öde
             </button>
           )}
         </div>
